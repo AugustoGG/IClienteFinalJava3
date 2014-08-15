@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+	
+		<meta http-equiv = "Content-Type" content = "text/html"; charset = UTF-8>
+		<title>FINAL</title>
+		
+		<link rel="stylesheet" href="css/bootstrap.css">
+			
+	</head>
+	<body>
+		
+		<div class="container">
+		
+			<div class="row">
+				<div class="col-xs-12">
+				
+					<!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist" id="myTab">
+                    	<li class="active"><a role="tab" data-toggle="tab" href="#home">INICIO</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">DOCENTE<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a role="tab" data-toggle="tab" href="#insertarDoc">AGREGA</a></li>
+								<li><a role="tab" data-toggle="tab" href="#actualizarDoc">MODIFICA</a></li>
+								<li><a role="tab" data-toggle="tab" href="#borrarDoc">ELIMINA</a></li>
+								<li><a role="tab" data-toggle="tab" href="#buscarTodosDoc">MUESTA TODOS</a></li>
+                                                                <li><a role="tab" data-toggle="tab" href="#buscarIdDoc">BUSQUEDA POR ID</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">MATERIA<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a role="tab" data-toggle="tab" href="#insertarMat">AGREGA</a></li>
+								<li><a role="tab" data-toggle="tab" href="#actualizarMat">MODIFICA</a></li>
+								<li><a role="tab" data-toggle="tab" href="#borrarMat">ELIMINA</a></li>
+								<li><a role="tab" data-toggle="tab" href="#buscarTodosMat">MUESTRA TODOS</a></li>
+								<li><a role="tab" data-toggle="tab" href="#buscarIdMat">BUSQUEDA POR ID</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">SALON<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a role="tab" data-toggle="tab" href="#insertarSal">AGREGA</a></li>
+								<li><a role="tab" data-toggle="tab" href="#actualizarSal">MODIFICA</a></li>
+								<li><a role="tab" data-toggle="tab" href="#borrarSal">ELIMINA</a></li>
+								<li><a role="tab" data-toggle="tab" href="#buscarTodosSal">MUESTRA TODOS</a></li>
+								<li><a role="tab" data-toggle="tab" href="#buscarIdSal">BUSQUEDA POR ID</a></li>
+							</ul>
+						</li>	
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content">
+						
+						<div class="tab-pane active" id="home">
+							<div class="row">
+								<div class="col-xs-6">
+									<h1>Ésta es mi interfaz de usuario, aunque no todo esta bien </h1>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab-pane" id="insertarDoc">
+							<div class="row">		
+								<div class="col-xs-6">
+									<label for="insDoc">Nombre:</label>
+									<input id="insDoc" type="text" class="form-control" placeholder="Ingrese el nombre del Docente"></input>
+									<button type="submit" class="btn btn-primary" id="envInsDoc">Enviar</button>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="insertarMat">
+							<div class="row">		
+								<div class="col-xs-6">
+									<label for="insMat">Nombre:</label>
+									<input id="insMat" type="text" class="form-control" placeholder="Ingrese el nombre de la Materia"></input>
+									<label for="insMatIdSal">ID Salon:</label>
+									<input id="insMatIdSal" type="text" class="form-control" placeholder="Ingrese el ID del Salon"></input>
+									<label for="insMatIdDoc">ID Docente:</label>
+									<input id="insMatIdDoc" type="text" class="form-control" placeholder="Ingrese el ID del Docente"></input>
+									<button type="submit" class="btn btn-primary" id="envInsMat">Enviar</button>
+								</div>
+							</div>
+						</div>
+                                        
+                                           
+						<div class="tab-pane" id="insertarSal">
+							<div class="row">		
+								<div class="col-xs-6">
+									<label for="insSale">Edificio:</label>
+									<input id="insSale" type="text" class="form-control" placeholder="Ingrese el edificio donde esta el salón"></input>
+									<label for="insSalni">Nivel:</label>
+									<input id="insSalni" type="text" class="form-control" placeholder="Ingrese el nivel donde esta el salón"></input>
+									<label for="insSalnu">Numero:</label>
+									<input id="insSalnu" type="text" class="form-control" placeholder="Ingrese el numero de salón"></input>
+									<button type="submit" class="btn btn-primary" id="envInsSal">Enviar</button>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="tab-pane" id="actualizarDoc">
+							<div class="row">		
+								<div class="col-xs-6">
+									<label for="actDocId">ID:</label>
+									<input id="actDocId" type="text" class="form-control" placeholder="Ingrese el ID">
+									<label for="actDoc">Nombre:</label>
+									<input id="actDoc" type="text" class="form-control" placeholder="Ingrese el nombre del docente"></input>
+									<button type="submit" class="btn btn-primary" id="envActDoc">Enviar</buttbreon>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab-pane" id="actualizarMat">
+							<div class="row">		
+								<div class="col-xs-6">
+									<label for="actMatId">ID:</label>
+									<input id="actMatId" type="text" class="form-control" placeholder="Ingrese el ID">
+									<label for="actMat">Nombre:</label>
+									<input id="actMat" type="text" class="form-control" placeholder="Ingrese la materia"></input>
+									<label for="actMatIdSal">ID Salon:</label>
+									<input id="actMatIdSal" type="text" class="form-control" placeholder="Ingrese el ID del Salon">
+									<label for="actMatIdDoc">ID Doc:</label>
+									<input id="actMatIdDoc" type="text" class="form-control" placeholder="Ingrese el ID del Docente">
+									<button type="submit" class="btn btn-primary" id="envActMat">Enviar</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab-pane" id="actualizarSal">
+							<div class="row">		
+								<div class="col-xs-6">
+									<label for="actSalId">ID Salon:</label>
+									<input id="actSalId" type="text" class="form-control" placeholder="Ingrese el ID de Producto">
+									<label for="actSale">Edificio:</label>
+									<input id="actSale" type="text" class="form-control" placeholder="Ingrese el Edificio"></input>
+									<label for="actSalni">Nivel:</label>
+									<input id="actSalni" type="text" class="form-control" placeholder="Ingrese el nivel"></input>
+									<label for="actSalnu">Numero:</label>
+									<input id="actSalnu" type="text" class="form-control" placeholder="Ingrese el numero"></input>
+									<button type="submit" class="btn btn-primary" id="envActSal">Enviar</button>
+								</div>
+							</div>
+						</div>
+						
+						<div class="tab-pane" id="borrarDoc">
+							<div class="row">		
+								<div class="col-xs-6">
+									<label for="borDoc">ID:</label>
+									<input id="borDoc" type="text" class="form-control" placeholder="Ingrese el ID del Docente"></input>
+									<button type="submit" class="btn btn-primary" id="envBorDoc">Enviar</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab-pane" id="borrarMat">
+							<div class="row">		
+								<div class="col-xs-6">
+									<label for="borMat">ID:</label>
+									<input id="borMat" type="text" class="form-control" placeholder="Ingrese el ID de la materia"></input>
+									<button type="submit" class="btn btn-primary" id="envBorMat">Enviar</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab-pane" id="borrarSal">
+							<div class="row">		
+								<div class="col-xs-6">
+									<label for="borSal">ID:</label>
+									<input id="borSal" type="text" class="form-control" placeholder="Ingrese el ID del salon"></input>
+									<button type="submit" class="btn btn-primary" id="envBorSal">Enviar</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab-pane" id="buscarTodosDoc">
+							<div class="row">&nbsp;</div>
+							<div class="row">		
+								<div class="col-xs-2">
+									<button type="submit" class="btn btn-primary btn-block" id="envBusDoc">Consultar</button>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<ul id="busDoc"></ul>
+								</div>
+							</div>
+						</div>
+						
+						<div class="tab-pane" id="buscarTodosMat">
+							<div class="row">&nbsp;</div>
+							<div class="row">		
+								<div class="col-xs-2">
+									<button type="submit" class="btn btn-primary btn-block" id="envBusMat">Consultar</button>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<ul id="busMat"></ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab-pane" id="buscarTodosSal">
+							<div class="row">&nbsp;</div>
+							<div class="row">		
+								<div class="col-xs-2">
+									<button type="submit" class="btn btn-primary btn-block" id="envBusSal">Consultar</button>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<ul id="busSal"></ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab-pane" id="buscarIdDoc">
+							<div class="row">		
+								<div class="col-xs-6">
+									<label for="busDocId">ID:</label>
+									<input id="busDocId" type="text" class="form-control" placeholder="Ingrese el ID del docente"></input>
+									<button type="submit" class="btn btn-primary" id="envBusDocId">Enviar</button>
+									<div class="row">
+										<div class="col-xs-12">
+											<ul id="bDocId"></ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab-pane" id="buscarIdMat">
+							<div class="row">		
+								<div class="col-xs-6">
+									<label for="busMatId">ID:</label>
+									<input id="busMatId" type="text" class="form-control" placeholder="Ingrese el ID de la materia"></input>
+									<button type="submit" class="btn btn-primary" id="envBusMatId">Enviar</button>
+									<div class="row">
+										<div class="col-xs-12">
+											<ul id="bMatId"></ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab-pane" id="buscarIdSal">
+							<div class="row">		
+								<div class="col-xs-6">
+									<label for="busSalId">ID:</label>
+									<input id="busSalId" type="text" class="form-control" placeholder="Ingrese el ID del Salon"></input>
+									<button type="submit" class="btn btn-primary" id="envBusSalId">Enviar</button>
+									<div class="row">
+										<div class="col-xs-12">
+											<ul id="bSalId"></ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+
+
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/jquery-migrate-1.2.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+		<!--Script para insertar un nuevo DOCENTE-->
+        <script>
+        	$("#envInsDoc").click(function(){
+        		var doc = $("#insDoc").val();
+        		$.ajax({
+        			method: 'POST',
+        			url:"http://localhost:8084/pfinal/servicios/docente/"+ doc,
+        			success: function(mensaje){
+        				alert(mensaje);
+        			},
+        			failure: function(e){
+        				alert(e);
+        			},
+        		});
+        	});
+        </script>
+
+        <!--Script para insertar una nueva MATERIA-->
+        <script>
+        	$("#envInsMat").click(function(){
+        		var mat = $("#insMat").val();
+                        var IdSal = $("#insMatIdSal").val();
+                        var IdDoc = $("#insMatIdDoc").val();
+        		$.ajax({
+        			method: 'POST',
+        			url:"http://localhost:8084/pfinal/servicios/materia/"+ mat+"/"+IdSal+"/"+IdDoc,
+        			success: function(mensaje){
+        				alert(mensaje);
+        			},
+        			failure: function(e){
+        				alert(e);
+        			}
+        		});
+        	});
+        </script>
+		
+		<!--Script para insertar un nuevo SALON-->
+        <script>
+        	$("#envInsSal").click(function(){
+        		var Edi = $("#insSale").val();
+        		var niv = $("#insSaleni").val();
+        		var num = $("#insSalenu").val();
+        		$.ajax({
+        			method: 'POST',
+        			url:"http://localhost:8084/pfinal/servicios/salon/"+Edi+"/"+niv+"/"+num,
+        			success: function(mensaje){
+        				alert(mensaje);
+        			},
+        			failure: function(e){
+        				alert(e);
+        			}
+        		});
+        	});
+        </script>
+
+		<!--Script para buscar TODOS LOS DOCENTES-->
+        <script>
+        	$("#envBusDoc").click(function(){
+        		$.getJSON("http://localhost:8084/pfinal/servicios/docente",function(result){
+        			$.each(result, function(i,campo){
+        				$("#busDoc").append("<li>"+ campo.idDoc +" - "+ campo.nomDoc +"</li>");
+        			});
+        		});
+        	});
+        </script>
+
+        <!--Script para buscar TODAS LAS MATERIAS-->
+        <script>
+        	$("#envBusMat").click(function(){
+        		$.getJSON("http://localhost:8084/pfinal/servicios/materia",function(result){
+        			$.each(result, function(i,campo){
+        				$("#busMat").append("<li>"+ campo.idMat +" - "+ campo.nomMat +" - "+ campo.MatIdSal +" - "+ campo.MatIdDoc +"</li>");
+        			});
+        		});
+        	});
+        </script>
+
+        <!--Script para buscar TODOS LOS SALONES-->
+        <script>
+        	$("#envBusSal").click(function(){
+        		$.getJSON("http://localhost:8084/pfinal/servicios/salon",function(result){
+        			$.each(result, function(i,campo){
+        				$("#busSal").append("<li>"+ campo.idSal+" - "+ campo.Sale +" - "+ campo.Salni +" - "+ campo.Salnu +"</li>");
+        			});
+        		});
+        	});
+        </script>
+        
+        <!--Script para ACTUALIZAR DOCENTES-->
+        <script>
+        	$("#envActDoc").click(function(){
+        		var idDoc = $("#actDocId").val();
+        		var Doc = $("#actDoc").val();
+        		$.ajax({
+        			method: 'PUT',
+        			url:"http://localhost:8084/pfinal/servicios/docente/"+ idDoc +"/"+ Doc,
+        			success: function(mensaje){
+        				alert(mensaje);
+        			},
+        			failure: function(e){
+        				alert(e);
+        			}
+        		});
+        	});
+        </script>
+        
+        <!--Script para ACTUALIZAR MATERIA-->
+        <script>
+        	$("#envActMat").click(function(){
+        		var idMat = $("#actMatId").val();
+        		var Mat = $("#actMat").val();
+                        var IdSal = $("#insMatIdSal").val();
+                        var IdDoc = $("#insMatIdDoc").val();
+        		$.ajax({
+        			method: 'PUT',
+        			url:"http://localhost:8084/pfinal/servicios/materia/"+ idMat +"/"+ Mat +"/"+ IdSal +"/"+ IdDoc,
+        			success: function(mensaje){
+        				alert(mensaje);
+        			},
+        			failure: function(e){
+        				alert(e);
+        			}
+        		});
+        	});
+        </script>
+        
+        <!--Script para ACTUALIZAR SALON-->
+        <script>
+        	$("#envActSal").click(function(){
+        		var idSal = $("#actSalId").val();
+        		var Edi = $("#insSale").val();
+        		var niv = $("#insSaleni").val();
+        		var num = $("#insSalenu").val();
+        		$.ajax({
+        			method: 'PUT',
+        			url:"http://localhost:8084/pfinal/servicios/salon//"+ idSal +"/"+ Edi +"/"+ niv +"/"+ num,
+        			success: function(mensaje){
+        				alert(mensaje);
+        			},
+        			failure: function(e){
+        				alert(e);
+        			}
+        		});
+        	});
+        </script>
+
+		<!--Script para ELIMINAR DOCENTE-->
+        <script>
+        	$("#envBorDoc").click(function(){
+        		var idDoc = $("#borDoc").val();
+        		$.ajax({
+        			method: 'DELETE',
+        			url: "http://localhost:8084/pfinal/servicios/docente/"+ idDoc,
+        			success: function(mensaje){
+        				alert(mensaje);
+        			},
+        			failure: function(e){
+        				alert(e);
+        			}
+        		});
+        	});
+        </script>
+
+        <!--Script para ELIMINAR MATERIA-->
+        <script>
+        	$("#envBorMat").click(function(){
+        		var idMat = $("#borMat").val();
+        		$.ajax({
+        			method: 'DELETE',
+        			url: "http://localhost:8084/pfinal/servicios/materia/"+ idMat,
+        			success: function(mensaje){
+        				alert(mensaje);
+        			},
+        			failure: function(e){
+        				alert(e);
+        			}
+        		});
+        	});
+        </script>
+
+        <!--Script para ELIMINAR SALON-->
+        <script>
+        	$("#envBorSal").click(function(){
+        		var idSal = $("#borSal").val();
+        		$.ajax({
+        			method: 'DELETE',
+        			url: "http://localhost:8084/pfinal/servicios/salon/"+ idSal,
+        			success: function(mensaje){
+        				alert(mensaje);
+        			},
+        			failure: function(e){
+        				alert(e);
+        			}
+        		});
+        	});
+        </script>
+
+        <!--Script para BUSCAR DOCENTE POR ID-->
+        <script>
+        	$("#envBusDocId").click(function(){
+        		var idDoc = $("#busDocId").val();
+        		$.ajax({
+        			method: 'GET',
+        			url: "http://localhost:8084/pfinal/servicios/docente/"+ idDoc,
+        			success: function(mensaje){
+        				$("#bDocId").append("<li>"+ mensaje + "</li>");
+        			},
+        			failure: function(e){
+        				alert(e);
+        			}
+        		});
+        	});
+        </script>
+
+        <!--Script para BUSCAR MATERIA POR ID-->
+        <script>
+        	$("#envBusMatId").click(function(){
+        		var idMat = $("#busMatId").val();
+        		$.ajax({
+        			method: 'GET',
+        			url: "http://localhost:8084/pfinal/servicios/materia/"+ idMat,
+        			success: function(mensaje){
+        				$("#bMatId").append("<li>"+ mensaje + "</li>");
+        			},
+        			failure: function(e){
+        				alert(e);
+        			}
+        		});
+        	});
+        </script>
+
+        <!--Script para BUSCAR SALON POR ID-->
+        <script>
+        	$("#envBusSalId").click(function(){
+        		var idSal = $("#busSalId").val();
+        		$.ajax({
+        			method: 'GET',
+        			url: "http://localhost:8084/pfinal/servicios/salon/"+ idSal,
+        			success: function(mensaje){
+        				$("#bSalId").append("<li>"+ mensaje + "</li>");
+        			},
+        			failure: function(e){
+        				alert(e);
+        			}
+        		});
+        	});
+        </script>
+
+	</body>
+
+</html>
+
